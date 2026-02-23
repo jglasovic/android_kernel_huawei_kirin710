@@ -3,3 +3,7 @@ NVTtouch_207_ts-objs += NVTtouch_207_ops.o NVTtouch_207_mp.o NVTtouch_207_fw_upd
 EXTRA_CFLAGS += -Iarch/arm/mach-hisi
 EXTRA_CFLAGS += -Idrivers/hisi/tzdriver
 EXTRA_CFLAGS += -Idrivers/tzdriver
+
+ccflags-y += -Idrivers/devkit/tpkit
+
+ccflags-y += -Idrivers/devkit/tpkit/panel/novatek_hybrid

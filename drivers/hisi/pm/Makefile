@@ -5,3 +5,5 @@ obj-$(CONFIG_HISI_SR_DEBUG) 				+= hisi_lpregs.o
 obj-$(CONFIG_HISI_SR_SYNC)					+= suspend.o
 
 
+
+ccflags-y += -Idrivers/hisi/ap/platform/kirin710

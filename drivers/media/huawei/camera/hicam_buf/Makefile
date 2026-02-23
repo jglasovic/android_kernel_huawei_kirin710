@@ -11,3 +11,5 @@ obj-y += hicam_buf_priv.o
 else
 obj-y += hicam_buf_priv_legacy.o
 endif
+
+ccflags-y += -Idrivers/media/huawei/camera/hicam_buf

@@ -25,3 +25,4 @@ obj-$(CONFIG_INPUTHUB_20)  += contexthub_ext_log.o
 obj-$(CONFIG_INPUTHUB_VIBRATOR_CHANNEL)  += vibrator_channel.o
 obj-$(CONFIG_INPUTHUB_20)  += fingerprint_ud_channel.o
 obj-$(CONFIG_INPUTHUB_20)  += big_data_channel.o
+ccflags-y += -Idrivers/huawei_platform/inputhub/kirin710

@@ -19,3 +19,7 @@ obj-$(CONFIG_SAMSUNG_TS_KIT)  += samsung/
 obj-$(CONFIG_HIMAX_TS_KIT_64)  += himax_64/
 obj-$(CONFIG_ELAN_TS_KIT)  += elan/
 obj-$(CONFIG_MSTAR_TS_KIT)  += mstar/
+
+ccflags-y += -Idrivers/devkit/tpkit
+
+ccflags-y += -Idrivers/devkit/tpkit/panel

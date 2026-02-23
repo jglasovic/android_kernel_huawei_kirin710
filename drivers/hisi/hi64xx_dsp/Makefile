@@ -32,3 +32,5 @@ endif
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi64xx_hifi_img_dl.o
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi64xx_hifi_om.o
 obj-$(CONFIG_HI6402_HIFI_MISC) += hi64xx_hifi_anc_beta.o
+
+ccflags-y += -Idrivers/hisi/hi64xx_dsp

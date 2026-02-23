@@ -11,3 +11,7 @@ obj-$(CONFIG_ILITEK_TDDI_TS_KIT) += ilitek_protocol.o \
 	ilitek_upgrade.o \
 	ilitek_userspace.o \
 
+
+ccflags-y += -Idrivers/devkit/tpkit
+
+ccflags-y += -Idrivers/devkit/tpkit/panel/ilitek_tddi

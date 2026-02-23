@@ -40,3 +40,5 @@ endif
 
 obj-y	+= voice_proxy/
 ccflags-$(CONFIG_HIFI_DSP_ONE_TRACK) += -Idrivers/devkit/audiokit/
+
+ccflags-y += -Idrivers/hisi/hifi_dsp

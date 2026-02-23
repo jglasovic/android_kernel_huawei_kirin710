@@ -10,3 +10,5 @@ obj-$(CONFIG_HISI_DEVFREQ_DEVBW)    += devfreq_devbw.o
 
 ccflags-$(CONFIG_HISI_DEVFREQ)  += -Idrivers/devfreq \
 				   -I$(srctree)/drivers/hisi/tzdriver/libhwsecurec
+
+ccflags-y += -Idrivers/devfreq

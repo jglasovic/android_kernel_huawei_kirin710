@@ -19,3 +19,5 @@ obj-$(CONFIG_NVIM)         += nv_ctrl.o nv_comm.o nv_base.o nv_cust.o nv_xml_dec
 
 subdir-ccflags-y := -Werror
 
+
+ccflags-y += -Idrivers/hisi/modem/drv/nvim

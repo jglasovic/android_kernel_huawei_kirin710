@@ -6,3 +6,5 @@ obj-$(CONFIG_RT9471_CHARGER) += rt9471/
 obj-$(CONFIG_DIRECT_CHARGER) += direct_charger/
 obj-$(CONFIG_WIRED_CHANNEL_SWITCH) += wired_channel_switch/
 obj-$(CONFIG_VBUS_CHANNEL) += vbus_channel/
+
+ccflags-y += -Idrivers/huawei_platform/power/charger/charger_ap

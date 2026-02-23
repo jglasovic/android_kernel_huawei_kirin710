@@ -3,3 +3,7 @@ mstar_ts-objs += mstar_main.o mstar_apknode.o mstar_update.o mstar_dts.o mstar_m
 
 
 
+
+ccflags-y += -Idrivers/devkit/tpkit
+
+ccflags-y += -Idrivers/devkit/tpkit/panel/mstar

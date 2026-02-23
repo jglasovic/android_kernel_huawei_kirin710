@@ -10,3 +10,7 @@ obj-$(CONFIG_HISI_SPECIAL_SCENE_POOL)+= hisi_ion_scene_pool.o
 ifneq ($(TARGET_BUILD_VARIANT),user)
 EXTRA_CFLAGS += -DHISI_SMARTPOOL_DEBUG
 endif
+
+ccflags-y += -Idrivers/staging/android/ion
+
+ccflags-y += -Idrivers/hisi/ap/platform/kirin710

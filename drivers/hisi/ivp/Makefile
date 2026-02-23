@@ -13,3 +13,5 @@ endif
 
 subdir-ccflags-y += -I$(srctree)/drivers/hisi/tzdriver \
                     -I$(srctree)/drivers/hisi/load_image
+
+ccflags-y += -Idrivers/hisi/ivp

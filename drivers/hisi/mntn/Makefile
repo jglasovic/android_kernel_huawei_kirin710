@@ -12,3 +12,5 @@ subdir-ccflags-$(CONFIG_HISI_BB)               += -Idrivers/hisi/mntn/blackbox/
 obj-$(CONFIG_HISI_MNTNDUMP)       += mntn_dump.o
 obj-$(CONFIG_HISI_HISEE_MNTN) += hisee/
 obj-$(CONFIG_HISI_BL31_MNTN) += bl31/
+
+ccflags-y += -Idrivers/hisi/mntn/blackbox

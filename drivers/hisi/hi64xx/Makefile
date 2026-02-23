@@ -26,3 +26,5 @@ obj-y += hi64xx_compat.o
 obj-y += hi64xx_utils.o
 obj-y += hi64xx_vad.o
 obj-y += asp_dma.o
+
+EXTRA_CFLAGS += -Idrivers/hisi/mntn/blackbox/platform_hifi

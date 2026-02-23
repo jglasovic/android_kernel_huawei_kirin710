@@ -20,3 +20,5 @@ obj-$(CONFIG_HISI_DFX_CORE) += rdr_dfx_core.o
 obj-$(CONFIG_HISI_BB) += rdr_cleartext.o
 obj-$(CONFIG_HISI_BB) += rdr_exception_trace.o
 
+
+ccflags-y += -Idrivers/hisi/ap/platform/kirin710

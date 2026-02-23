@@ -31,3 +31,5 @@ EXTRA_CFLAGS += -Idrivers/devkit/lcdkit/lcdkit3.0/kernel/common/include
 ifeq ($(CONFIG_HUAWEI_TS_KIT_TEST_3_0),y)
 EXTRA_CFLAGS += -DHUAWEI_TS_KIT_TEST
 endif
+
+ccflags-y += -Idrivers/devkit/tpkit/3_0

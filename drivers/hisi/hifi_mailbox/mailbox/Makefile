@@ -13,3 +13,5 @@ obj-$(CONFIG_HIFI_MAILBOX)	+= drv_mailbox_msg.o
 obj-$(CONFIG_HIFI_MAILBOX)	+= drv_mailbox_debug.o
 obj-$(CONFIG_HIFI_MAILBOX)	+= drv_mailbox_port_linux.o
 obj-$(CONFIG_HIFI_MAILBOX)	+= drv_mailbox.o
+
+EXTRA_CFLAGS += -I$(srctree)/drivers/hisi/hifi_mailbox/mailbox

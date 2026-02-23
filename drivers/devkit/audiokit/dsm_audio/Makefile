@@ -4,3 +4,5 @@
 
 dsm-audio-objs :=dsm_audio.o
 obj-$(CONFIG_HUAWEI_DSM_AUDIO)  += dsm-audio.o
+
+ccflags-y += -Idrivers/devkit/audiokit/dsm_audio

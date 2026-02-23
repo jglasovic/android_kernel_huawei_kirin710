@@ -55,3 +55,5 @@ obj-$(CONFIG_USB_F_AUDIO_SRC)   += usb_f_audio_source.o
 usb_f_accessory-y               := f_accessory.o
 obj-$(CONFIG_USB_F_ACC)         += usb_f_accessory.o
 obj-y				+= function-hisi/
+
+ccflags-y += -Idrivers/usb/gadget/function

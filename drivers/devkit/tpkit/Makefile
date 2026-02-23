@@ -28,3 +28,5 @@ obj-$(CONFIG_HUAWEI_TS_KIT_3_0)    += 3_0/
 ifeq ($(CONFIG_HUAWEI_TS_KIT_TEST),y)
 EXTRA_CFLAGS += -DHUAWEI_TS_KIT_TEST
 endif
+
+ccflags-y += -Idrivers/devkit/tpkit

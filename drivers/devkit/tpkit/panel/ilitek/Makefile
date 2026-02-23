@@ -6,3 +6,6 @@ obj-$(CONFIG_ILITEK_TS_KIT) += ilitek_aim.o \
 EXTRA_CFLAGS += -Iarch/arm/mach-hisi
 EXTRA_CFLAGS += -Idrivers/hisi/tzdriver
 EXTRA_CFLAGS += -Idrivers/tzdriver
+ccflags-y += -Idrivers/devkit/tpkit
+
+ccflags-y += -Idrivers/devkit/tpkit/panel/ilitek

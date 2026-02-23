@@ -26,3 +26,5 @@ obj-$(CONFIG_HISI_PERIDVFS)  += dvfs/
 else
 obj-$(CONFIG_HISI_PERIDVFS)  += peri_dvfs/
 endif
+
+ccflags-y += -Idrivers/hisi/ap/platform/kirin710

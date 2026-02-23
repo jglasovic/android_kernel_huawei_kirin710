@@ -358,3 +358,5 @@ endif
 
 clean:
 	rm *.o .*cmd
+
+EXTRA_CFLAGS += -Idrivers/video/fbdev/hisi/dss -Idrivers/video/fbdev/hisi

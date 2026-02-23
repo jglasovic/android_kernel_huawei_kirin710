@@ -52,3 +52,5 @@ EXTRA_CFLAGS += -DCOMBOPHY_FW_UPDATE
 endif
 
 obj-$(CONFIG_CONTEXTHUB_PD) += pd.o
+
+ccflags-y += -Idrivers/hisi/ap/platform/kirin710

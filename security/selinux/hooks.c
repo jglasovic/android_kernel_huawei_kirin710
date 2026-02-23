@@ -92,7 +92,7 @@
 #include "netport.h"
 #include "xfrm.h"
 #include "netlabel.h"
-#include "audit.h"
+#include "include/audit.h"
 #include "avc_ss.h"
 
 #define SELINUX_POOL_ALIGNMENT_ORDER	4

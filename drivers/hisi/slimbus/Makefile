@@ -20,3 +20,7 @@ hisilicon-slimbus-platform-objs += slimbus_6405.o
 endif
 
 obj-$(CONFIG_HISILICON_PLATFORM_SLIMBUS)		+= hisilicon-slimbus-platform.o
+
+ccflags-y += -Idrivers/hisi/slimbus
+
+ccflags-y += -Idrivers/hisi/mntn/blackbox/platform_hifi

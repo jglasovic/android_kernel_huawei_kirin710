@@ -16,3 +16,7 @@ EXTRA_CFLAGS += -Idrivers/video/fbdev/hisi/dss \
 		-Idrivers/devkit/lcdkit/lcdkit1.0 \
 		-Idrivers/devkit/lcdkit/lcdkit1.0/core/common \
 		-Idrivers/devkit/tpkit
+
+ccflags-y += -Idrivers/devkit/lcdkit/lcdkit1.0/core/common/hisi
+
+ccflags-y += -Idrivers/hisi/ap/platform/kirin710
