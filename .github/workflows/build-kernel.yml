@@ -1,0 +1,51 @@
+name: Build Kernel Image.gz
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Image.gz (arm64 cross-compile)
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends \
+            gcc-aarch64-linux-gnu bc bison flex libssl-dev make
+
+      - name: Configure kernel
+        run: make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- kirin710_defconfig
+
+      - name: Build Image.gz
+        run: |
+          make ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
+            "BALONG_INC=-I$(pwd)/kernel" \
+            KCFLAGS="-Wno-error=maybe-uninitialized -Wno-error=address -Wno-error=sizeof-pointer-memaccess -Wno-error=misleading-indentation" \
+            -j$(nproc) Image.gz
+
+      - name: Get branch name
+        id: branch
+        run: echo "name=${GITHUB_REF_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Create/update rolling release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.branch.outputs.name }}-latest
+          name: "${{ steps.branch.outputs.name }} — latest kernel"
+          body: |
+            Rolling release of `Image.gz` built from `${{ steps.branch.outputs.name }}` branch.
+
+            **Commit:** ${{ github.sha }}
+            **Built:** ${{ github.event.head_commit.timestamp || github.event.repository.updated_at }}
+
+            This release is overwritten on each build.
+          files: arch/arm64/boot/Image.gz
+          make_latest: false
+          prerelease: true
