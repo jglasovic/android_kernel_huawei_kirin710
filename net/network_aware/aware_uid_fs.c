@@ -317,13 +317,10 @@ static __net_init int aware_net_init(struct net *net)
 
 static  void aware_net_exit(struct net *net)
 {
-    if (NULL == net){
+    if (NULL == net || NULL == net->proc_net){
         return ;
     }
-    remove_proc_entry(AWARE_FS_BG_UIDS, net->proc_net);
-    remove_proc_entry(AWARE_FS_FG_UIDS, net->proc_net);
-    remove_proc_entry(AWARE_FS_CTRL, net->proc_net);
-    remove_proc_entry(AWARE_FS_NET_PATH, net->proc_net);
+    remove_proc_subtree(AWARE_FS_NET_PATH, net->proc_net);
 }
 
 static __net_initdata struct pernet_operations aware_net_ops = {
