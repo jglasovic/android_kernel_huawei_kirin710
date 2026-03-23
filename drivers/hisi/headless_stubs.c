@@ -43,8 +43,3 @@ void iowp_workqueue_init(void) {}
 EXPORT_SYMBOL(iowp_workqueue_init);
 void iowp_report(int pid, int tgid, char *name) {}
 EXPORT_SYMBOL(iowp_report);
-
-/* drivers/mmc/core/hisi_mmc_bkops.S calls this from precompiled assembly;
-   implementation lived in blackbox/rdr_common.c (CONFIG_HISI_BB) */
-void rdr_syserr_process_for_ap(unsigned int modid, unsigned long long arg1, unsigned long long arg2) {}
-EXPORT_SYMBOL(rdr_syserr_process_for_ap);
